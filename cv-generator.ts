@@ -32,7 +32,7 @@ const escudo = fetch(
 const senescyt = fetch(
   //'https://cdn.jsdelivr.net/gh/markgark/react-ts-vuvib@main/imagenes/logo-senescyt.jpeg'
 
-  'https://github.com/markgark/react-ts-mkgk-docxApp/blob/main/imagenes/logo-senescyt.png'
+  'https://github.com/markgark/react-ts-mkgk-docxApp/blob/main/imagenes/logo-senescyt.jpeg'
 ).then((r) => r.blob());
 
 const gobiernodetodos = fetch(
