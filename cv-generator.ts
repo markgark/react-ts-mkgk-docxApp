@@ -809,7 +809,7 @@ export class DocumentCreator {
           bold: true,
         }),
       ],
-      heading: HeadingLevel.HEADING_3,
+      heading: HeadingLevel.HEADING_2,
       //thematicBreak: true
     });
   }
@@ -817,7 +817,7 @@ export class DocumentCreator {
   public createSubHeading(text: string): Paragraph {
     return new Paragraph({
       text: text,
-      heading: HeadingLevel.HEADING_2
+      heading: HeadingLevel.HEADING_4
     });
   }
 
