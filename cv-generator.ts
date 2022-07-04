@@ -12,7 +12,6 @@ import {
   TableRow,
   TableBorders,
   VerticalAlign,
-  AlignmentType,
   WidthType,
   BorderStyle,
   TabStopPosition,
@@ -45,6 +44,7 @@ const pathPlantilla = //'https://github.com/markgark/react-docx-vuvib-docs/blob/
 
 import archivoPlantilla from //'https://github.com/markgark/react-docx-vuvib-docs/blob/main/plantillas/resolucion-pib.txt';
 'https://github.com/markgark/react-ts-mkgk-docxApp/blob/main/plantillas/resolucion-pib.txt';
+import { recursosMuestras } from "./cv-data";
 
 const contenidoPlantilla = fetch(archivoPlantilla).then(t => t.text());
 
@@ -67,6 +67,7 @@ const contenidoPlantilla = fetch(archivoPlantilla).then(t => t.text());
 //   file.readAsText(e.target.files[0])
 // }
 
+console.log(recursosMuestras);
 
 export class DocumentCreator {
   // tslint:disable-next-line: typedef
@@ -108,7 +109,7 @@ export class DocumentCreator {
                 new TextRun({
                   text: "AUTORIZACION DE COLECTA",
                   font: "Arial",
-                  color: "gray", 
+                  color: "#808080", 
                   size: 18,
                 }),
               ]
@@ -421,12 +422,27 @@ export class DocumentCreator {
             children: [
                 new TableCell({
                     children: [
-                      new Paragraph("Identificador")
+                      new Paragraph({
+                        children:[
+                          new TextRun({
+                          text: "Identificador",
+                          bold: true,
+                          }),
+                        ],
+                      })
                     ],
                 }),
                 new TableCell({
-                    children: [new Paragraph("Nombres y apellidos")
-                  ],
+                    children: [
+                      new Paragraph({
+                        children:[
+                          new TextRun({
+                          text: "Nombres y Apellidos",
+                          bold: true,
+                          }),
+                        ],
+                      })
+                    ],
                 }),
                 new TableCell({
                   children: [
@@ -434,6 +450,7 @@ export class DocumentCreator {
                       children:[
                         new TextRun({
                         text: "Nacionalidad",
+                        bold: true,
                         }),
                       ],
                       alignment: AlignmentType.CENTER,
@@ -446,6 +463,7 @@ export class DocumentCreator {
                       children:[
                         new TextRun({
                         text: "Transporta",
+                        bold: true,
                         }),
                       ],
                       alignment: AlignmentType.CENTER,
@@ -744,7 +762,7 @@ export class DocumentCreator {
               text: especimen,
               font: "Arial",
               size: 20,
-              color: "gray",
+              color: "#808080",
           }),
        ]
      });
