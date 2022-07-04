@@ -25,24 +25,30 @@ const PROFILE_URL = "https://www.linkedin.com/in/dolan1";
 const EMAIL = "docx@docx.com";
 
 const escudo = fetch(
-  'https://cdn.jsdelivr.net/gh/markgark/react-ts-vuvib@main/imagenes/republica-ecuador-escudo.png'
+  //'https://cdn.jsdelivr.net/gh/markgark/react-ts-vuvib@main/imagenes/republica-ecuador-escudo.png'
+  'https://github.com/markgark/react-ts-mkgk-docxApp/blob/main/imagenes/logo-escudo.png'
   ).then((r) => r.blob())
 
 const senescyt = fetch(
-  'https://cdn.jsdelivr.net/gh/markgark/react-ts-vuvib@main/imagenes/logo-senescyt.jpeg'
+  //'https://cdn.jsdelivr.net/gh/markgark/react-ts-vuvib@main/imagenes/logo-senescyt.jpeg'
+
+  'https://github.com/markgark/react-ts-mkgk-docxApp/blob/main/imagenes/logo-senescyt.png'
 ).then((r) => r.blob());
 
 const gobiernodetodos = fetch(
-    'https://cdn.jsdelivr.net/gh/markgark/react-ts-vuvib@main/imagenes/gobierno-de-todos.png'
+  //'https://cdn.jsdelivr.net/gh/markgark/react-ts-vuvib@main/imagenes/gobierno-de-todos.png'
+  'https://github.com/markgark/react-ts-mkgk-docxApp/blob/main/imagenes/logo-gobierno.png'
 ).then((r) => r.blob());
 
 // const contenidoPlantilla = fetch(
 //   'https://cdn.jsdelivr.net/gh/markgark/react-ts-vuvib@main/plantillas/resolucion-pib.txt'
 // ).then(t => t.text());
 
-const pathPlantilla = 'https://github.com/markgark/react-docx-vuvib-docs/blob/main/plantillas/resolucion-pib.txt';
+const pathPlantilla = //'https://github.com/markgark/react-docx-vuvib-docs/blob/main/plantillas/resolucion-pib.txt'
+'https://github.com/markgark/react-ts-mkgk-docxApp/blob/main/plantillas/resolucion-pib.txt';
 
-import archivoPlantilla from 'https://github.com/markgark/react-docx-vuvib-docs/blob/main/plantillas/resolucion-pib.txt';
+import archivoPlantilla from //'https://github.com/markgark/react-docx-vuvib-docs/blob/main/plantillas/resolucion-pib.txt';
+'https://github.com/markgark/react-ts-mkgk-docxApp/blob/main/plantillas/resolucion-pib.txt';
 
 const contenidoPlantilla = fetch(archivoPlantilla).then(t => t.text());
 
