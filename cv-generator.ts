@@ -39,14 +39,13 @@ const gobiernodetodos = fetch(
 //   'https://cdn.jsdelivr.net/gh/markgark/react-ts-vuvib@main/plantillas/resolucion-pib.txt'
 // ).then(t => t.text());
 
-const pathPlantilla = //'https://github.com/markgark/react-docx-vuvib-docs/blob/main/plantillas/resolucion-pib.txt'
-'https://github.com/markgark/react-ts-mkgk-docxApp/blob/main/plantillas/resolucion-pib.txt';
+// const pathPlantilla = //'https://github.com/markgark/react-docx-vuvib-docs/blob/main/plantillas/resolucion-pib.txt'
+// 'https://github.com/markgark/react-ts-mkgk-docxApp/blob/main/plantillas/resolucion-pib.txt';
 
-import archivoPlantilla from //'https://github.com/markgark/react-docx-vuvib-docs/blob/main/plantillas/resolucion-pib.txt';
-'https://github.com/markgark/react-ts-mkgk-docxApp/blob/main/plantillas/resolucion-pib.txt';
-import { recursosMuestras } from "./cv-data";
+// import archivoPlantilla from //'https://github.com/markgark/react-docx-vuvib-docs/blob/main/plantillas/resolucion-pib.txt';
+// 'https://github.com/markgark/react-ts-mkgk-docxApp/blob/main/plantillas/resolucion-pib.txt';
 
-const contenidoPlantilla = fetch(archivoPlantilla).then(t => t.text());
+// const contenidoPlantilla = fetch(archivoPlantilla).then(t => t.text());
 
 // var file = new FileReader();
 // file.readAsText(e.target.files[0]);
@@ -67,7 +66,8 @@ const contenidoPlantilla = fetch(archivoPlantilla).then(t => t.text());
 //   file.readAsText(e.target.files[0])
 // }
 
-console.log(recursosMuestras);
+import { recursosMuestras } from "./cv-data";
+//console.log(recursosMuestras);
 
 export class DocumentCreator {
   // tslint:disable-next-line: typedef
@@ -109,7 +109,7 @@ export class DocumentCreator {
                 new TextRun({
                   text: "AUTORIZACION DE COLECTA",
                   font: "Arial",
-                  color: "#808080", 
+                  //color: "#808080", 
                   size: 18,
                 }),
               ]
@@ -158,7 +158,7 @@ export class DocumentCreator {
                 arr.push(this.createRecursoHeader(especimen.scientificname));
                 arr.push(this.createTableHeaderRecursos());
                 arr.push(this.parrrafoBlanco());
-                console.log(especimen)
+                //console.log(especimen)
 
                             //     const bulletPoints = this.splitParagraphIntoBullets(
             //       education.notes
@@ -762,7 +762,7 @@ export class DocumentCreator {
               text: especimen,
               font: "Arial",
               size: 20,
-              color: "#808080",
+              //color: "#808080",
           }),
        ]
      });
