@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { render } from "react-dom";
 import Hello from "./App";
 import "./style.css";
-//import { saveAs } from "file-saver";
+import { saveAs } from "file-saver";
 import { Packer } from "docx";
 import { identificacion, solicitante, autorizacion,responsables,zonasUbicaciones, laboratoriosDestino, recursos, muestras, experiences, education, skills, achievements } from "./cv-data";
 import { DocumentCreator } from "./cv-generator";
