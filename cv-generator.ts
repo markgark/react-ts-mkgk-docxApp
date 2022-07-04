@@ -25,18 +25,14 @@ const PROFILE_URL = "https://www.linkedin.com/in/dolan1";
 const EMAIL = "docx@docx.com";
 
 const escudo = fetch(
-  //'https://cdn.jsdelivr.net/gh/markgark/react-ts-vuvib@main/imagenes/republica-ecuador-escudo.png'
   'https://github.com/markgark/react-ts-mkgk-docxApp/blob/main/imagenes/logo-escudo.png'
   ).then((r) => r.blob())
 
 const senescyt = fetch(
-  //'https://cdn.jsdelivr.net/gh/markgark/react-ts-vuvib@main/imagenes/logo-senescyt.jpeg'
-
   'https://github.com/markgark/react-ts-mkgk-docxApp/blob/main/imagenes/logo-senescyt.jpeg'
 ).then((r) => r.blob());
 
 const gobiernodetodos = fetch(
-  //'https://cdn.jsdelivr.net/gh/markgark/react-ts-vuvib@main/imagenes/gobierno-de-todos.png'
   'https://github.com/markgark/react-ts-mkgk-docxApp/blob/main/imagenes/logo-gobierno.png'
 ).then((r) => r.blob());
 
@@ -271,8 +267,8 @@ export class DocumentCreator {
                     new ImageRun({
                       data: escudo,
                       transformation: {
-                        width: 175,
-                        height: 94,
+                        width: 182,
+                        height: 45,
                       },
                     }),
                   ],
