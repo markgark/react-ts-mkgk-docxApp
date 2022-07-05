@@ -67,7 +67,7 @@ const gobiernodetodos = fetch(
 // }
 
 import { recursosMuestras } from "./cv-data";
-//console.log(recursosMuestras);
+console.log(recursosMuestras);
 
 export class DocumentCreator {
   // tslint:disable-next-line: typedef
@@ -134,7 +134,7 @@ export class DocumentCreator {
             this.createTableHeaderReponsables(),
             ...responsables
               .map(responsable => {
-                const arr: Paragraph[] = [];
+                const arr: Table[] = [];
                 arr.push(this.createTableResponsable(responsable.id, responsable.nombre, responsable.pais, responsable.transporta));
                 return arr;
               })
@@ -154,11 +154,10 @@ export class DocumentCreator {
 
             ...recursos
               .map(especimen => {
-                const arr: Paragraph[] = [];
+                const arr: Table[] = [];
                 arr.push(this.createRecursoHeader(especimen.scientificname));
                 arr.push(this.createTableHeaderRecursos());
                 arr.push(this.parrrafoBlanco());
-                //console.log(especimen)
 
                             //     const bulletPoints = this.splitParagraphIntoBullets(
             //       education.notes
@@ -246,7 +245,7 @@ export class DocumentCreator {
             //   alignment: AlignmentType.CENTER
             // })
           ]
-        }
+        },
       ]
     });
 

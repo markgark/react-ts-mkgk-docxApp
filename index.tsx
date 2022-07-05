@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+//import { createRoot } from "react-dom/client";
 import { render } from "react-dom";
 import Hello from "./App";
 import "./style.css";
@@ -16,7 +17,7 @@ class App extends Component<AppProps, AppState> {
   constructor(props) {
     super(props);
     this.state = {
-      name: "React"
+      name: "Marco"
     };
   }
 
@@ -37,19 +38,22 @@ class App extends Component<AppProps, AppState> {
       achievements
     ]);
 
+    console.log("aqui 1"),
+
     Packer.toBlob(doc).then(blob => {
       console.log(blob);
       saveAs(blob, "example.docx");
       console.log("Document created successfully");
     });
+
+    console.log("aqui 2");
   }
 
-  render() {
+render() {
     return (
       <div>
         <Hello name={this.state.name} />
         <p>
-          Start editing to see some magic happen :)
           <button onClick={this.generate}>Generar documento!</button>
         </p>
       </div>
@@ -58,3 +62,4 @@ class App extends Component<AppProps, AppState> {
 }
 
 render(<App />, document.getElementById("root"));
+
